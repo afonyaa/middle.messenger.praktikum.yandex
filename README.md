@@ -16,7 +16,7 @@ Here, you can enjoy seamless conversations, meet like-minded people, and forge r
 
 ### Getting started
 
+- Run `npm i`
 - Run `npx husky install`
-- Run `npm pkg set scripts.prepare="husky install"`
 
 ### Project structure
