@@ -1,24 +1,36 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import handlebars from 'vite-plugin-handlebars';
+
+import Handlebars from 'handlebars';
 
 export default defineConfig({
-  root: resolve(__dirname, 'src'),
   build: {
     outDir: resolve(__dirname, 'dist'),
-    rollupOptions: {
-      input: {
-        main: './src/index.html',
-        profile: './src/pages/profile/profile.html',
-      },
-    },
   },
   plugins: [
-    handlebars({
-      partialDirectory: resolve(__dirname, './src/partials'),
-      context: {
-        username: 'Afonya',
+    {
+      name: 'precompile-hbs-file',
+      transform(src, id) {
+        if (/\.(hbs)$/.test(id)) {
+
+          // language=javascript
+          const code = `
+            import HandlebarsRuntime from 'handlebars/runtime';
+            export default HandlebarsRuntime.template(${Handlebars.precompile(src)});
+          `
+          return {
+            code
+          }
+        }
       },
-    }),
+    },
   ],
+    resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '@ui': resolve(__dirname, './src/ui'),
+      '@pages': resolve(__dirname, './src/pages'),
+    },
+  },
 });
+

@@ -1,0 +1,44 @@
+.sign-in-page-container {
+  background-color: #2c2c34;
+  color: #e0e0e0;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+/** Описание */
+.sign-in-page-container__description {
+  float: left;
+  max-width: 30em;
+  margin: 15em 3em 0;
+}
+.sign-in-page-container__description_text {
+  line-height: 1.5;
+}
+
+/** Форма для входа */
+.sign-in-page-container__form {
+  width: 30em;
+  max-width: 80%;
+  float: right;
+  margin: 4em 3em;
+}
+
+.sign-in-page-container__form_title {
+  text-align: center;
+}
+
+.sign-in-page-container__form_content {
+  & > * + * {
+    margin-top: 2em;
+  }
+}
+
+/** input styles */
+.base-input-label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.base-input-root {
+  width: 100%; //todo rewrite to 100%
+  font-size: 1.1em;
+}
