@@ -1,6 +1,6 @@
 import SignInTemplate from './signIn.hbs';
 
-export const SignInPageRootURL = '/signIn';
+export const SignInPageRootURL = '/sign-in';
 
 export default () => {
   return SignInTemplate();
