@@ -1,5 +1,5 @@
-import SignInPage, { SignInPageRootURL } from '@pages/SignIn';
 import SignUpPage, { SignUpPageRootURL } from '@pages/SignUp';
+import SignInPage, { SignInPageRootURL } from '@pages/SignIn';
 
 const root = document.getElementById('root');
 
