@@ -9,6 +9,7 @@
 .sign-up-page-container {
   max-width: 1024px;
   margin: 0 auto;
+  min-height: 100vh; // TODO - костыль?
 }
 
 /** Описание */
@@ -25,9 +26,19 @@
 /** Форма для регистрации */
 .sign-up-page-container__form {
   width: 20em;
-  max-width: 80%;
   float: right;
   margin: 2em 3em;
+}
+
+// TODO - magic number
+@media only screen and (max-width: 870px) {
+  .sign-up-page-container__form {
+    margin: 0 auto;
+    float: initial;
+  }
+  .sign-up-page-container__description {
+    display: none;
+  }
 }
 
 .sign-up-page-container__form_title {
@@ -40,7 +51,6 @@
   }
 }
 
-/** input styles */
 .base-input-label {
   display: block;
   margin-bottom: 0.5em;
