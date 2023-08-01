@@ -1,4 +1,4 @@
-import SignInPage, { SignInPageRootURL } from './pages/SignIn';
+import SignInPage, { SignInPageRootURL } from '@pages/SignIn';
 
 const root = document.getElementById('root');
 
