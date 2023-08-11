@@ -1,62 +1,38 @@
-.sign-up-page-root {
+.sign-up-page {
   background-image: url('/public/assets/base-welcome-bg.jpg');
   background-size: cover;
   color: #e0e0e0;
   min-height: 100vh;
   overflow: auto;
-}
-
-.sign-up-page-container {
-  max-width: 1024px;
-  margin: 0 auto;
-  min-height: 100vh; // TODO - костыль?
-}
-
-/** Описание */
-.sign-up-page-container__description {
-  float: left;
-  font-size: 1.3rem;
-  max-width: 30em;
-  margin: 15em 3em 0;
-}
-
-.sign-up-page-container__description_text {
-  line-height: 1.5;
+  &__description {
+    float: left;
+    font-size: 1.3rem;
+    max-width: 30em;
+    margin: 15em 3em 0;
+    & p {
+      line-height: 1.5;
+    }
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
 }
 
 /** Форма для регистрации */
-.sign-up-page-container__form {
+.sign-up-form {
   width: 20em;
   float: right;
   margin: 2em 3em;
-}
-
-// TODO - magic number
-@media only screen and (max-width: 1020px) {
-  .sign-up-page-container__form {
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    & > * + * {
+      margin-top: 2em;
+    }
+  }
+  @media only screen and (max-width: 1020px) {
     margin: 0 auto;
     float: initial;
   }
-  .sign-up-page-container__description {
-    display: none;
-  }
-}
-
-.sign-up-page-container__form_title {
-  text-align: center;
-}
-
-.sign-up-page-container__form_content {
-  & > * + * {
-    margin-top: 2em;
-  }
-}
-
-.base-input-label {
-  display: block;
-  margin-bottom: 0.5em;
-}
-.base-input-root {
-  width: 100%; //todo rewrite to 100%
-  font-size: 1.1em;
 }

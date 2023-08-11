@@ -1,4 +1,4 @@
-.sign-in-page-root {
+.sign-in-page {
   background-image: url('/public/assets/base-welcome-bg.jpg');
   background-size: cover;
   color: #e0e0e0;
@@ -6,23 +6,15 @@
   overflow: auto;
 }
 
-.sign-in-page-container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
-/** Форма для входа */
-.sign-in-page-container__form {
+.sign-in-form {
   width: 20em;
   margin: 8em auto;
-}
-
-.sign-in-page-container__form_title {
-  text-align: center;
-}
-
-.sign-in-page-container__form_content {
-  & > * + * {
-    margin-top: 2em;
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    & > * + * {
+      margin-top: 2em;
+    }
   }
 }
