@@ -1,6 +1,7 @@
 import Handlebars from 'handlebars/runtime';
 import BaseButton from '@ui/BaseButton/baseButton.hbs';
 import BaseInput from '@ui/BaseInput/baseInput.hbs';
+import BaseModal from '@ui/BaseModal/baseModal.hbs';
 
 import SignUpPage, { SignUpPageRootURL } from '@pages/SignUp';
 import SignInPage, { SignInPageRootURL } from '@pages/SignIn';
@@ -9,6 +10,7 @@ import NotFoundPage from '@pages/ErrorPages/NotFound';
 
 Handlebars.registerPartial('baseButton', BaseButton);
 Handlebars.registerPartial('baseInput', BaseInput);
+Handlebars.registerPartial('baseModal', BaseModal);
 
 const root = document.getElementById('root');
 
