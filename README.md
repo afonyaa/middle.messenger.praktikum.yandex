@@ -10,7 +10,12 @@ Here, you can enjoy seamless conversations, meet like-minded people, and forge r
 
 ## Live demo
 
-[Link to website](https://web-chat-afonya.netlify.app/)
+[Link to website](https://deploy--spontaneous-panda-71c00f.netlify.app/)
+- [Sign In](https://deploy--spontaneous-panda-71c00f.netlify.app/sign-in)
+- [Sign Up](https://deploy--spontaneous-panda-71c00f.netlify.app/sign-up)
+- [My Profile](https://deploy--spontaneous-panda-71c00f.netlify.app/my-profile)
+- [404](https://deploy--spontaneous-panda-71c00f.netlify.app/abracadabra)
+
 
 ## Contributing :octocat:
 
