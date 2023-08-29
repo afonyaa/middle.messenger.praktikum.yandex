@@ -18,5 +18,4 @@ Here, you can enjoy seamless conversations, meet like-minded people, and forge r
 
 - Run `npm i`
 - Run `npm prepare`
-
-### Project structure
+- Run `npm run dev`
