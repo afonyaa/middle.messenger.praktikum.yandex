@@ -1,0 +1,26 @@
+.not-found-page {
+  background: #34363c;
+  height: 100vh;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-size: 8.6em;
+    margin: 1rem;
+    &.colorful {
+      background: linear-gradient(
+        45deg,
+        rgb(70, 201, 134) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgb(84, 137, 222) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &.small {
+      font-size: 1.4em;
+    }
+  }
+}
