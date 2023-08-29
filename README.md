@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/179e1a34-bdc5-4e69-9cca-018c140ffc7a/deploy-status)](https://app.netlify.com/sites/spontaneous-panda-71c00f/deploys)
+
 # Web chat app :milky_way:
 
 Looking for meaningful connections and engaging discussions? You've come to the right place. At WebChat, we foster a dynamic community, welcoming users from all walks of life to share ideas, debate thoughts, or simply catch up on casual conversation.
