@@ -14,4 +14,7 @@ export default defineConfig({
       '@pages': resolve(__dirname, './src/pages'),
     },
   },
+  server: {
+    port: 3000
+  }
 });
