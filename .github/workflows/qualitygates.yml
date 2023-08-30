@@ -7,10 +7,13 @@ on:
 
 jobs:
   standard-checks:
-    name: Quality gates
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
       - name: Install packages
         run: npm ci
       - name: Build
