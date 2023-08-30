@@ -1,9 +1,6 @@
 name: Quality Gates
 
-on:
-  push:
-    branches:
-      - deploy
+on: [push]
 
 jobs:
   standard-checks:
