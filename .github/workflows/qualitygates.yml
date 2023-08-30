@@ -1,4 +1,4 @@
-name: Lighthouse checks
+name: Quality Gates
 
 on:
   push:
@@ -7,10 +7,14 @@ on:
 
 jobs:
   standard-checks:
-    name: Test lighthouse
+    name: Quality gates
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install packages
+        run: npm ci
+      - name: Build
+        run: npm run build
       - name: Lighthouse benchmarks
         run: npm run ci:lighthouse
 
