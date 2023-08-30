@@ -5,7 +5,10 @@ import BaseModal from '@ui/BaseModal/baseModal.hbs';
 
 import SignUpPage, { SignUpPageRootURL } from '@pages/SignUp';
 import SignInPage, { SignInPageRootURL } from '@pages/SignIn';
-import MyProfilePage, { MyProfilePageRootURL } from '@pages/MyProfile';
+import MyProfilePage, {
+  MyProfilePreviewPageRootURL,
+  MyProfileEditPageRootURL,
+} from '@pages/MyProfile';
 import NotFoundPage from '@pages/ErrorPages/NotFound';
 
 Handlebars.registerPartial('baseButton', BaseButton);
@@ -21,8 +24,11 @@ switch (window.location.pathname) {
   case SignUpPageRootURL:
     root.innerHTML = SignUpPage();
     break;
-  case MyProfilePageRootURL:
-    root.innerHTML = MyProfilePage();
+  case MyProfileEditPageRootURL:
+    root.innerHTML = MyProfilePage({ isPreview: false });
+    break;
+  case MyProfilePreviewPageRootURL:
+    root.innerHTML = MyProfilePage({ isPreview: true });
     break;
   case '/':
     break;

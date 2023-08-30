@@ -13,11 +13,12 @@ Here, you can enjoy seamless conversations, meet like-minded people, and forge r
 ## Live demo
 
 [Link to website](https://deploy--spontaneous-panda-71c00f.netlify.app/)
+
 - [Sign In](https://deploy--spontaneous-panda-71c00f.netlify.app/sign-in)
 - [Sign Up](https://deploy--spontaneous-panda-71c00f.netlify.app/sign-up)
-- [My Profile](https://deploy--spontaneous-panda-71c00f.netlify.app/my-profile)
+- [My Profile Preview](https://deploy--spontaneous-panda-71c00f.netlify.app/my-profile/preview)
+- [My Profile Edit](https://deploy--spontaneous-panda-71c00f.netlify.app/my-profile/edit)
 - [404](https://deploy--spontaneous-panda-71c00f.netlify.app/abracadabra)
-
 
 ## Contributing :octocat:
 

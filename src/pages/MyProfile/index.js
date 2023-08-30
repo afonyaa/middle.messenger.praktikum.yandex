@@ -1,7 +1,9 @@
-import MyProfileTemplate from './myProfile.hbs';
+import PreviewProfileTemplate from './Preview/previewProfile.hbs';
+import EditProfileTemplate from './Edit/editProfile.hbs';
 
-export const MyProfilePageRootURL = '/my-profile';
+export const MyProfileEditPageRootURL = '/my-profile/edit';
+export const MyProfilePreviewPageRootURL = '/my-profile/preview';
 
-export default () => {
-  return MyProfileTemplate();
+export default ({ isPreview }) => {
+  return isPreview ? PreviewProfileTemplate() : EditProfileTemplate();
 };
