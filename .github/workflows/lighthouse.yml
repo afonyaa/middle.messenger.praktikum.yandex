@@ -1,0 +1,16 @@
+name: Lighthouse checks
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  standard-checks:
+    name: Test lighthouse
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lighthouse benchmarks
+        run: npm run ci:lighthouse
+
