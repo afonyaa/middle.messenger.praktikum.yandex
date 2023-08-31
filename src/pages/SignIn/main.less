@@ -1,0 +1,20 @@
+.sign-in-page {
+  background-image: url('/public/assets/base-welcome-bg.jpg');
+  background-size: cover;
+  color: @text-color-white;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.sign-in-form {
+  width: 20em;
+  margin: 8em auto;
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    & > * + * {
+      margin-top: 2em;
+    }
+  }
+}

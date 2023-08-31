@@ -1,0 +1,29 @@
+<div class='sign-in-page'>
+  <div class='double-container'>
+    <form class='sign-in-form' name='sign-in-form'>
+      <h1 class='sign-in-form__title'>
+        Welcome back!
+      </h1>
+      <div class='sign-in-form__content'>
+        <div>
+          <label for='sign_in_login' class='base-input-label'>Username</label>
+          <input id='sign_in_login' name='login' class='base-input-root' />
+        </div>
+        <div>
+          <label for='sign_in_password' class='base-input-label'>Password</label>
+          <input
+            id='sign_in_password'
+            type='password'
+            name='password'
+            class='base-input-root'
+          />
+        </div>
+        {{>baseButton text="Sign In"}}
+        <div>
+          Do not have an account?
+          <a>Sign up.</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

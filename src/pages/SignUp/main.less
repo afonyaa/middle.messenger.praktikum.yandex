@@ -1,0 +1,38 @@
+.sign-up-page {
+  background-image: url('/public/assets/base-welcome-bg.jpg');
+  background-size: cover;
+  color: @text-color-white;
+  min-height: 100vh;
+  overflow: auto;
+  &__description {
+    float: left;
+    font-size: 1.3rem;
+    max-width: 30em;
+    margin: 15em 3em 0;
+    & p {
+      line-height: 1.5;
+    }
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+/** Форма для регистрации */
+.sign-up-form {
+  width: 20em;
+  float: right;
+  margin: 2em 3em;
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    & > * + * {
+      margin-top: 2em;
+    }
+  }
+  @media only screen and (max-width: 1020px) {
+    margin: 0 auto;
+    float: initial;
+  }
+}
