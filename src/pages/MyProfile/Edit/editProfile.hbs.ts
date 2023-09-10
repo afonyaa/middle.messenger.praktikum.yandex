@@ -1,7 +1,8 @@
-<div class='my-profile-page'>
+// language=hbs
+export default `<div class='my-profile-page'>
   <aside class='my-profile-page__backlink'>
     <span>
-      <img src='/assets/back-arrow.png' width='12' alt='icon-back'/>
+      <img src='/assets/back-arrow.png' width='12' />
     </span>
   </aside>
   <div class='my-profile-page__profile'>
@@ -10,58 +11,47 @@
         Evgeny
       </h3>
     </div>
-    <div class='my-profile-page__form'>
+    <form class='my-profile-page__form'>
       <div class='my-profile-page__row'>
         <span>
-          Mail
+          Email
         </span>
-        <span>
-          test@mail.ru
-        </span>
+        <input type='text' name='email' />
       </div>
       <div class='my-profile-page__row'>
         <span>
           Login
         </span>
+        <input type='text' name='login'>
+      </div>
+      <div class='my-profile-page__row'>
         <span>
-          afonya
+          Display name
         </span>
+        <input type='text' name='display_name'>
       </div>
       <span class='my-profile-page__row'>
         <span>
           Name
         </span>
-        <span>
-          Evgeny
-        </span>
+        <input type='text' name='first_name' />
       </span>
       <div class='my-profile-page__row'>
         <span>
           Last name
         </span>
-        <span>
-          Afanasev
-        </span>
+        <input type='text' name='second_name' />
       </div>
       <div class='my-profile-page__row'>
         <span>
           Phone number
         </span>
-        <span>
-          8800553535
-        </span>
+        <input type='tel' name='phone' />
       </div>
       <div class='my-profile-page__actions'>
-        <div>
-          Изменить данные
-        </div>
-        <div>
-          Изменить пароль
-        </div>
-        <div class='my-profile-page__actions_exit'>
-          Выйти
-        </div>
+        {{>baseButton text="Save"}}
       </div>
-    </div>
+    </form>
   </div>
 </div>
+`;

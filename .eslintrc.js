@@ -20,6 +20,8 @@ module.exports = {
     "@typescript-eslint/no-duplicate-enum-values": "error",
     "@typescript-eslint/prefer-enum-initializers": "error",
     "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/restrict-template-expressions": "warn",
+    "@typescript-eslint/no-base-to-string": "warn",
     "@typescript-eslint/ban-types": [
       "error",
       {

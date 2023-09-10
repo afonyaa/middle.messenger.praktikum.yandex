@@ -1,4 +1,5 @@
-<div class='sign-in-page'>
+// language=hbs
+export default `<div class='sign-in-page'>
   <div class='double-container'>
     <form class='sign-in-form' name='sign-in-form'>
       <h1 class='sign-in-form__title'>
@@ -27,3 +28,4 @@
     </form>
   </div>
 </div>
+`;

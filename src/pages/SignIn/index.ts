@@ -1,7 +1,8 @@
 import SignInTemplate from './signIn.hbs';
+import Handlebars from 'handlebars';
 
 export const SignInPageRootURL = '/sign-in';
 
 export default () => {
-  return SignInTemplate();
+  return Handlebars.compile(SignInTemplate)({});
 };

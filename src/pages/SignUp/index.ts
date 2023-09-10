@@ -1,7 +1,7 @@
 import SignUpTemplate from './signUp.hbs';
-
+import Handlebars from 'handlebars';
 export const SignUpPageRootURL = '/sign-up';
 
 export default () => {
-  return SignUpTemplate();
+  return Handlebars.compile(SignUpTemplate)({});
 };

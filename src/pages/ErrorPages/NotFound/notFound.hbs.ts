@@ -1,4 +1,7 @@
+// language=hbs
+export default `
 <div class='not-found-page'>
     <h3 class='not-found-page__title colorful'>Oops... 404</h3>
     <h1 class='not-found-page__title small'>Not Found</h1>
 </div>
+`;

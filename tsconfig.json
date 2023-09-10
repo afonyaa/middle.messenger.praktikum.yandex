@@ -21,6 +21,6 @@
       "@pages/*": ["./src/pages/*"]
     }
   },
-  "include": ["src", "config", "vite.config.ts"],
+  "include": ["src", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

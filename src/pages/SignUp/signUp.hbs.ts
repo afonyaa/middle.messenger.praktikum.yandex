@@ -1,4 +1,5 @@
-<div class='sign-up-page'>
+// language=hbs
+export default `<div class='sign-up-page'>
   <div class='double-container'>
     <div class='sign-up-page__description'>
       <h1>
@@ -78,3 +79,4 @@
     </form>
   </div>
 </div>
+`;
