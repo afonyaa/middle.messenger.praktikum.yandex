@@ -4,4 +4,3 @@ dist/
 .eslintrc.js
 env.d.ts
 package.json
-*.hbs
