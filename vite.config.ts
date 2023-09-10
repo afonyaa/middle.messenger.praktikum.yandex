@@ -11,9 +11,10 @@ export default defineConfig({
       '@ui': resolve(__dirname, './src/ui'),
       '@pages': resolve(__dirname, './src/pages'),
       '@core': resolve(__dirname, './src/core'),
+      '@types': resolve(__dirname, './src/types'),
     },
   },
   server: {
-    port: 3000
-  }
+    port: 3000,
+  },
 });
