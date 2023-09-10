@@ -15,23 +15,27 @@ Handlebars.registerPartial('baseButton', BaseButton);
 Handlebars.registerPartial('baseInput', BaseInput);
 Handlebars.registerPartial('baseModal', BaseModal);
 
-const root = document.getElementById('root');
+const root: HTMLElement | null = document.getElementById('root');
 
-switch (window.location.pathname) {
-  case SignInPageRootURL:
-    root.innerHTML = SignInPage();
-    break;
-  case SignUpPageRootURL:
-    root.innerHTML = SignUpPage();
-    break;
-  case MyProfileEditPageRootURL:
-    root.innerHTML = MyProfilePage({ isPreview: false });
-    break;
-  case MyProfilePreviewPageRootURL:
-    root.innerHTML = MyProfilePage({ isPreview: true });
-    break;
-  case '/':
-    break;
-  default:
-    root.innerHTML = NotFoundPage();
+if (!root) {
+  document.write('No root element specified');
+} else {
+  switch (window.location.pathname) {
+    case SignInPageRootURL:
+      root.innerHTML = SignInPage();
+      break;
+    case SignUpPageRootURL:
+      root.innerHTML = SignUpPage();
+      break;
+    case MyProfileEditPageRootURL:
+      root.innerHTML = MyProfilePage({ isPreview: false });
+      break;
+    case MyProfilePreviewPageRootURL:
+      root.innerHTML = MyProfilePage({ isPreview: true });
+      break;
+    case '/':
+      break;
+    default:
+      root.innerHTML = NotFoundPage();
+  }
 }
