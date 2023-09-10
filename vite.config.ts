@@ -10,6 +10,7 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
       '@ui': resolve(__dirname, './src/ui'),
       '@pages': resolve(__dirname, './src/pages'),
+      '@core': resolve(__dirname, './src/core'),
     },
   },
   server: {
