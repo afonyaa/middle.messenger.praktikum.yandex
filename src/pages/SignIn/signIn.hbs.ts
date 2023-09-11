@@ -19,7 +19,7 @@ export default `<div class='sign-in-page'>
             class='base-input-root'
           />
         </div>
-        {{>baseButton text="Sign In"}}
+          <button>sign in</button>
         <div>
           Do not have an account?
           <a>Sign up.</a>

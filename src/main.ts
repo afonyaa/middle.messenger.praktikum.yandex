@@ -20,7 +20,9 @@ if (!root) {
 } else {
   switch (window.location.pathname) {
     case SignInPageRootURL:
-      root.innerHTML = SignInPage();
+      if (SignInPage) {
+        root.appendChild(SignInPage);
+      }
       break;
     case SignUpPageRootURL:
       root.innerHTML = SignUpPage();
