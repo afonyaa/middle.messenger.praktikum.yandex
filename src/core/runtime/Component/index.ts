@@ -1,22 +1,29 @@
 import { LifeCycleEventBus } from './LyfecycleEventBus';
-import { ComponentHTMLElement, ComponentMeta } from './interfaces';
+import {
+  ComponentHTMLElement,
+  ComponentMeta,
+  ComponentProps,
+} from './interfaces';
 import { DEFAULT_COMPONENT_TAG } from './constants';
+import { v4 as makeUUID } from 'uuid';
 
-class Component<Props extends object> {
+class Component<Props> {
   private element: ComponentHTMLElement = null;
   private eventBus: LifeCycleEventBus;
   private readonly meta: ComponentMeta<Props> = null;
-  props: Props;
+  props: ComponentProps<Props>;
+  readonly id: string | null;
 
   protected constructor(
     tagName = DEFAULT_COMPONENT_TAG,
-    initialProps = {} as Props,
+    initialProps = {} as ComponentProps<Props>,
   ) {
     this.meta = {
       tagName,
       props: initialProps,
     };
-    this.props = this.makePropsProxy(initialProps);
+    this.id = initialProps?.settings?.withInternalId ? makeUUID() : null;
+    this.props = this.makePropsProxy({ ...initialProps, __id: this.id });
     this.eventBus = new LifeCycleEventBus();
     this.registerLifecycleEvents();
     this.eventBus.emit('init');
@@ -33,6 +40,27 @@ class Component<Props extends object> {
     this.element = tagName ? this.createDocumentElement(tagName) : null;
   }
 
+  private addEvents() {
+    const events = this.props.events;
+    if (events) {
+      Object.keys(events).forEach((eventName) => {
+        if (this.element) {
+          this.element.addEventListener(eventName, events[eventName]);
+        }
+      });
+    }
+  }
+  private removeEvents() {
+    const events = this.props.events;
+    if (events) {
+      Object.keys(events).forEach((eventName) => {
+        if (this.element) {
+          this.element.removeEventListener(eventName, events[eventName]);
+        }
+      });
+    }
+  }
+
   init() {
     this.createResources();
     this.eventBus.emit('render');
@@ -44,7 +72,7 @@ class Component<Props extends object> {
 
   componentDidMount() {}
 
-  setProps = (nextProps: Props) => {
+  setProps = (nextProps: Props | ComponentProps<Props>) => {
     if (!nextProps) {
       return;
     }
@@ -54,15 +82,19 @@ class Component<Props extends object> {
   private _render() {
     if (this.element) {
       this.element.innerHTML = this.render();
+      this.addEvents();
     }
   }
   protected render(): string {
     return '';
   }
 
-  private makePropsProxy(props: Props) {
+  private makePropsProxy(props: ComponentProps<Props>): ComponentProps<Props> {
     return new Proxy(props, {
-      set: (target: Props, prop: string, value) => {
+      set: (target: ComponentProps<Props>, prop: string, value) => {
+        if (prop === 'events') {
+          this.removeEvents();
+        }
         target[prop as keyof typeof target] =
           value as (typeof target)[keyof typeof target];
         this.eventBus.emit('render');
@@ -72,7 +104,11 @@ class Component<Props extends object> {
   }
 
   private createDocumentElement(tagName: string): ComponentHTMLElement {
-    return document.createElement(tagName);
+    const element = document.createElement(tagName);
+    if (this.id) {
+      element.setAttribute('data-id', this.id);
+    }
+    return element;
   }
 
   get getHTMLElement() {

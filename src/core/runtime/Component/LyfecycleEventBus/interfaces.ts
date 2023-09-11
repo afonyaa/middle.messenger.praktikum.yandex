@@ -1,2 +1,2 @@
-export type Event = 'init' | 'didMount' | 'render';
+export type Event = 'init' | 'didMount' | 'render' | 'beforeUpdate';
 export type ListenerPayload = void;

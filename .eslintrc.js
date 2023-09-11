@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   rules: {
+
     "no-invalid-this": "error",
     "@typescript-eslint/no-mixed-enums": "error",
     "@typescript-eslint/no-duplicate-enum-values": "error",
@@ -31,7 +32,7 @@ module.exports = {
           },
           "{}": {
             "message": "Avoid using `{}` as a type. Prefer a more specific type like `unknown`, or use a type annotation."
-          }
+          },
         }
       }
     ]
