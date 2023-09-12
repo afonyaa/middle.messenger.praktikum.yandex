@@ -70,7 +70,7 @@ export default `<div class='sign-up-page'>
             class='base-input-root'
           />
         </div>
-          {{>baseButton text="Sign Up"}}
+          <button>Sign up</button>
         <div>
           Already have an account?
           <a>Sign in.</a>

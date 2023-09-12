@@ -111,7 +111,7 @@ class Component<Props> {
     return element;
   }
 
-  get getHTMLElement() {
+  getHTMLElement(): ComponentHTMLElement {
     return this.element;
   }
 

@@ -15,6 +15,4 @@ class SignInPage extends Component<SignInPageProps> {
   }
 }
 
-const signInPage = new SignInPage();
-
-export default signInPage.getHTMLElement;
+export default SignInPage;

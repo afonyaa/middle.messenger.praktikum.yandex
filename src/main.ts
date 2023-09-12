@@ -20,12 +20,10 @@ if (!root) {
 } else {
   switch (window.location.pathname) {
     case SignInPageRootURL:
-      if (SignInPage) {
-        root.appendChild(SignInPage);
-      }
+      root.appendChild(new SignInPage().getHTMLElement()!);
       break;
     case SignUpPageRootURL:
-      root.innerHTML = SignUpPage();
+      root.appendChild(new SignUpPage().getHTMLElement()!);
       break;
     case MyProfileEditPageRootURL:
       root.innerHTML = MyProfilePage({ isPreview: false });
