@@ -1,3 +1,1 @@
-export default `<div>
-  <input/>
-</div>`;
+export default `<input/>`;
