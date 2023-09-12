@@ -1,7 +1,3 @@
-import Handlebars from 'handlebars';
-import BaseButton from '@ui/BaseButton/baseButton.hbs';
-import BaseInput from '@ui/BaseInput/baseInput.hbs';
-
 import SignUpPage, { SignUpPageRootURL } from '@pages/SignUp';
 import SignInPage, { SignInPageRootURL } from '@pages/SignIn';
 import MyProfilePage, {
@@ -9,9 +5,6 @@ import MyProfilePage, {
   MyProfileEditPageRootURL,
 } from '@pages/MyProfile';
 import NotFoundPage from '@pages/ErrorPages/NotFound';
-
-Handlebars.registerPartial('baseButton', BaseButton);
-Handlebars.registerPartial('baseInput', BaseInput);
 
 const root: HTMLElement | null = document.getElementById('root');
 

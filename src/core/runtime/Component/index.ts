@@ -25,7 +25,9 @@ class Component<Props> {
     this.id = initialProps?.settings?.withInternalId ? makeUUID() : null;
     this.props = this.makePropsProxy({ ...initialProps, __id: this.id });
     this.eventBus = new LifeCycleEventBus();
+
     this.registerLifecycleEvents();
+
     this.eventBus.emit('init');
   }
 

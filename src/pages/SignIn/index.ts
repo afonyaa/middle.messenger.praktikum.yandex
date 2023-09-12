@@ -10,7 +10,7 @@ class SignInPage extends Component<SignInPageProps> {
   constructor() {
     super('div', { settings: { withInternalId: true } });
   }
-  render(): string {
+  protected render(): string {
     return Handlebars.compile(SignInTemplate)(this.props);
   }
 }
