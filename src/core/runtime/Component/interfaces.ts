@@ -2,8 +2,9 @@ import { Maybe } from '@/types';
 
 export type ComponentBaseProps = {
   settings?: {
-    withInternalId?: boolean;
+    withInternalId: true;
   };
+  readonly id?: string;
   events?: ComponentEvents;
 };
 

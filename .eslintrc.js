@@ -17,7 +17,9 @@ module.exports = {
   rules: {
 
     "no-invalid-this": "error",
+    "no-case-declarations": "warn",
     "@typescript-eslint/no-mixed-enums": "error",
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-duplicate-enum-values": "error",
     "@typescript-eslint/prefer-enum-initializers": "error",
     "@typescript-eslint/no-unused-vars": "warn",

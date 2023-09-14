@@ -1,4 +1,3 @@
-import Handlebars from 'handlebars';
 import Component from '@core/runtime/Component';
 
 import BaseInputTemplate from './baseInput.hbs';
@@ -13,7 +12,7 @@ class BaseInput extends Component<BaseInputProps> {
   }
 
   protected render(): string {
-    return Handlebars.compile(BaseInputTemplate)(this.props);
+    return this.compile(BaseInputTemplate);
   }
 }
 

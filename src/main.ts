@@ -13,7 +13,8 @@ if (!root) {
 } else {
   switch (window.location.pathname) {
     case SignInPageRootURL:
-      root.appendChild(new SignInPage().getHTMLElement()!);
+      const signInPage = new SignInPage();
+      root.appendChild(signInPage.getHTMLElement()!);
       break;
     case SignUpPageRootURL:
       root.appendChild(new SignUpPage().getHTMLElement()!);

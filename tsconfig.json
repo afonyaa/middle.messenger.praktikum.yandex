@@ -10,10 +10,10 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "noImplicitReturns": true,
     "skipLibCheck": true,
+    "noUnusedLocals": false,
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],

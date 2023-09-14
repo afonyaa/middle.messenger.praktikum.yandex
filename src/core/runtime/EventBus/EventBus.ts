@@ -15,13 +15,13 @@ abstract class EventBus<Event extends string, Payload> {
     this.listeners[event].push(listener);
   }
 
-  public emit(event: Event) {
+  public emit(event: Event, payload: Payload) {
     const listeners: EventBusListener<Payload>[] = this.listeners[event];
     if (!listeners) {
       throw new Error('no listeners');
     }
     listeners.forEach((listener) => {
-      listener();
+      listener(payload);
     });
   }
 
